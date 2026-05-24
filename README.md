@@ -69,7 +69,7 @@ python app.py
 ## 项目结构
 
 ```markdown
-├── app.py               # Gradio Web 界面
+├── app.py                # Gradio Web 界面
 ├── rag_system.py         # RAG 核心系统
 ├── requirements.txt      # 依赖列表
 ├── .env.example          # API Key 配置模板
@@ -77,6 +77,7 @@ python app.py
 │   ├── deepseek的技术报告.txt
 │   ├── Python编程技巧.txt
 │   └── 人工智能发展简史.txt
+├── Testdocs/             # 多格式文档功能测试用文档
 └── vector_db/            # ChromaDB 持久化数据
 ```
 
@@ -88,30 +89,30 @@ python app.py
 
 #### 问题一 Deepseek 相关
 
-- **LLM：**![image-20260524174114249](E:\.codes\hcil3\HCI-RAG-Deepseek\assets\image-20260524174114249.png)
+- **LLM：**![image-20260524174114249](assets/image-20260524174114249.png)
 
-- **仅检索：**![image-20260524174320780](E:\.codes\hcil3\HCI-RAG-Deepseek\assets\image-20260524174320780.png)
+- **仅检索：**![image-20260524174320780](assets/image-20260524174320780.png)
 
-- **RAG：**![image-20260524174839724](E:\.codes\hcil3\HCI-RAG-Deepseek\assets\image-20260524174839724.png)
+- **RAG：**![image-20260524174839724](assets/image-20260524174839724.png)
 
 #### 问题二 Python相关
 
-- **LLM：**![image-20260524175018874](E:\.codes\hcil3\HCI-RAG-Deepseek\assets\image-20260524175018874.png)
+- **LLM：**![image-20260524175018874](assets/image-20260524175018874.png)
 
-- **仅检索：**![image-20260524175050837](E:\.codes\hcil3\HCI-RAG-Deepseek\assets\image-20260524175050837.png)
+- **仅检索：**![image-20260524175050837](assets/image-20260524175050837.png)
 
-- **RAG：**![image-20260524175112790](E:\.codes\hcil3\HCI-RAG-Deepseek\assets\image-20260524175112790.png)
+- **RAG：**![image-20260524175112790](assets/image-20260524175112790.png)
 
 #### 问题三 人工智能发展相关
 
-- **LLM：**![image-20260524175208479](E:\.codes\hcil3\HCI-RAG-Deepseek\assets\image-20260524175208479.png)
+- **LLM：**![image-20260524175208479](assets/image-20260524175208479.png)
 
-- **仅检索：**![image-20260524175245631](E:\.codes\hcil3\HCI-RAG-Deepseek\assets\image-20260524175245631.png)
+- **仅检索：**![image-20260524175245631](assets/image-20260524175245631.png)
 
-- **RAG：**![image-20260524175305342](E:\.codes\hcil3\HCI-RAG-Deepseek\assets\image-20260524175305342.png)
+- **RAG：**![image-20260524175305342](assets/image-20260524175305342.png)
 
 ### 多格式文档
 
 所用测试文档均在 `Testdocs/` 中，所问问题相关信息由其中的文档给出，提问结果如下：
 
-![image-20260524182225892](E:\.codes\hcil3\HCI-RAG-Deepseek\assets\image-20260524182225892.png)
+![image-20260524182225892](assets/image-20260524182225892.png)
