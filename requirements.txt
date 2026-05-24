@@ -1,0 +1,28 @@
+# Python >= 3.10
+
+# LLM API
+openai>=1.0.0                  # DeepSeek API 兼容 OpenAI SDK
+
+# Embedding 模型
+sentence-transformers>=2.2.0   # 本地方案: BAAI/bge-small-zh / all-MiniLM-L6-v2
+
+# 向量数据库
+chromadb>=0.4.0                # 轻量级向量数据库 (主用)
+faiss-cpu>=1.7.4               # FAISS 向量检索 (备用)
+
+# LangChain 框架
+langchain>=0.1.0               # RAG 开发框架
+langchain-chroma>=0.1.0        # LangChain Chroma 集成
+langchain-community>=0.1.0     # 文档加载器等社区组件
+
+# 文档解析
+pypdf>=3.0.0                   # PDF 解析
+python-docx>=0.8.11            # Word 文档解析
+unstructured>=0.10.0           # 多格式文档加载器
+
+# Web 界面
+gradio>=4.0.0                  # 交互式 Web UI
+
+# 工具
+python-dotenv>=1.0.0           # 环境变量管理
+tiktoken>=0.5.0                # Token 计数

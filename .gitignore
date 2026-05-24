@@ -1,4 +1,7 @@
-
 needs.md
 .vscode
 .claude
+.env
+vector_db/
+__pycache__/
+*.pyc
