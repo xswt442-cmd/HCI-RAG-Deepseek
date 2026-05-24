@@ -31,6 +31,10 @@ cp .env.example .env
 - **分隔符**: `\n\n` → `\n` → `。` → 空格 — 优先保持句子完整性
 - **总计**: 38 个 chunk
 
+### 向量库构建
+
+首次运行 `python app.py` 或 `python rag_system.py` 时自动构建到 `vector_db/`，后续重启检测到已有数据自动跳过。如需重建，删除 `vector_db/` 目录即可。
+
 ## 技术选型
 
 | 组件 | 选型 | 理由 |
@@ -64,7 +68,7 @@ python app.py
 
 ## 项目结构
 
-```
+```markdown
 ├── app.py               # Gradio Web 界面
 ├── rag_system.py         # RAG 核心系统
 ├── requirements.txt      # 依赖列表
@@ -75,3 +79,39 @@ python app.py
 │   └── 人工智能发展简史.txt
 └── vector_db/            # ChromaDB 持久化数据
 ```
+
+## 测试截图
+
+### LLM vs 仅检索 vs RAG
+
+直接启动 `app.py` 切换不同模式进行提问测试。
+
+#### 问题一 Deepseek 相关
+
+- **LLM：**![image-20260524174114249](E:\.codes\hcil3\HCI-RAG-Deepseek\assets\image-20260524174114249.png)
+
+- **仅检索：**![image-20260524174320780](E:\.codes\hcil3\HCI-RAG-Deepseek\assets\image-20260524174320780.png)
+
+- **RAG：**![image-20260524174839724](E:\.codes\hcil3\HCI-RAG-Deepseek\assets\image-20260524174839724.png)
+
+#### 问题二 Python相关
+
+- **LLM：**![image-20260524175018874](E:\.codes\hcil3\HCI-RAG-Deepseek\assets\image-20260524175018874.png)
+
+- **仅检索：**![image-20260524175050837](E:\.codes\hcil3\HCI-RAG-Deepseek\assets\image-20260524175050837.png)
+
+- **RAG：**![image-20260524175112790](E:\.codes\hcil3\HCI-RAG-Deepseek\assets\image-20260524175112790.png)
+
+#### 问题三 人工智能发展相关
+
+- **LLM：**![image-20260524175208479](E:\.codes\hcil3\HCI-RAG-Deepseek\assets\image-20260524175208479.png)
+
+- **仅检索：**![image-20260524175245631](E:\.codes\hcil3\HCI-RAG-Deepseek\assets\image-20260524175245631.png)
+
+- **RAG：**![image-20260524175305342](E:\.codes\hcil3\HCI-RAG-Deepseek\assets\image-20260524175305342.png)
+
+### 多格式文档
+
+所用测试文档均在 `Testdocs/` 中，所问问题相关信息由其中的文档给出，提问结果如下：
+
+![image-20260524182225892](E:\.codes\hcil3\HCI-RAG-Deepseek\assets\image-20260524182225892.png)

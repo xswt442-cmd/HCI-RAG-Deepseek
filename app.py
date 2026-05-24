@@ -1,18 +1,20 @@
 """
 RAG 系统 Gradio Web 界面 — 支持多格式文档上传
+启动约需 30-40 秒（加载 torch/transformers/embedding 模型），请耐心等待。
 """
 import os
+import sys
 import tempfile
 from pathlib import Path
 
 import gradio as gr
+
+print("⏳ 正在加载 RAG 系统...", flush=True)
 from rag_system import RAGSystem
-
 rag = RAGSystem()
-
-print("正在初始化知识库...")
+print("⏳ 正在初始化知识库...", flush=True)
 rag.build_knowledge_base()
-print("初始化完成！")
+print("✅ 初始化完成！", flush=True)
 
 
 def answer_question(question, mode):
